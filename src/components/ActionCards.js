@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const actions = [
   {
     title: 'Plan Management',
@@ -24,7 +24,7 @@ const ActionCards = () => (
       <div className="action-card" key={action.title}>
         <h3>{action.title}</h3>
         <p>{action.desc}</p>
-        <button>{action.label}</button>
+        <Link to="admin/dashboard"><button>{action.label}</button></Link>
       </div>
     ))}
   </div>
